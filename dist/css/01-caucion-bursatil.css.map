@@ -2,7 +2,7 @@
     "version": 3,
     "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,SAAS;CAuB9B;;AAzBD,AAIE,iBAJe,CAIf,yBAAyB,CAAC;EACxB,OAAO,EAAE,IAAI;EACb,kBAAkB,EAAE,SAAS;CAkB9B;;AAxBH,AAQI,iBARa,CAIf,yBAAyB,CAIvB,cAAc,CAAC;EACb,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,OAAO;CAa/B;;AAvBL,AAYM,iBAZW,CAIf,yBAAyB,CAIvB,cAAc,CAIZ,wBAAwB,CAAC;EACvB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,uBAAuB;CAC/C;;AAfP,AAiBM,iBAjBW,CAIf,yBAAyB,CAIvB,cAAc,CASZ,sBAAsB,CAAC;EACrB,OAAO,EAAE,IAAI;EACb,qBAAqB,EAAE,eAAe;EACtC,eAAe,EAAE,GAAG;EACpB,eAAe,EAAE,KAAK;CACvB",
     "sources": [
-        "../scss/accimarket/01-caucion-bursatil.scss"
+        "../../src/styles/scss/accimarket/01-caucion-bursatil.scss"
     ],
     "names": [],
     "file": "01-caucion-bursatil.css"

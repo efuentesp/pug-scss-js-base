@@ -1,0 +1,44 @@
+extends ../../layouts/html5
+
+block title
+   title 03. Seguimiento de Órdenes - Histórico
+
+block styles
+   link(rel="stylesheet", href="/dist/css/03-seguimiento-de-ordenes-historico.css")
+
+block content
+   .container#causion-bursatil
+      +accordion("criterios_busqueda_accordion")
+         +accordion-item("criterios_busqueda_accordion_item")
+            #search-criterias-column
+               +field-date("date", "Fecha")
+               +field-plus-minus("contrato", "Contrato")
+               +field-plus-minus("digito", "Digito")
+               +field-checks("servicio_inversion",
+                           "Servicio de Inversión",
+                           {key: "S01", value:"Asesoría", color:"#fff"},
+                           {key: "S02", value:"Gestión", color:"#fff"},
+                           {key: "S03", value:"Comercialización", color:"#fff"},
+                           {key: "S04", value:"Ejecución", color:"#fff"},
+                           {key: "S05", value:"N/A", color:"#fff"}
+                           )
+               +field-checks("rompe",
+                           "Rompe",
+                           {key: "SI", value:"Si", color:"#fff"},
+                           {key: "NO", value:"No", color:"#fff"},
+                           {key: "N/A", value:"N/A", color:"#fff"}
+                           )                          
+            #search-actions-column
+               +button-search
+               +button-clean
+               +button-pdf
+               +button-xls
+      section#search-results-section
+        +tab-group("seguimiento_ordenes_tab_group")
+          +tab-item("tab_item_intradia", "seguimiento_ordenes_tab_group", "Intradia")
+          +tab-item("tab_item_historicos", "seguimiento_ordenes_tab_group", "Históricos")
+            +grid("ordenes_historicas")
+
+block scripts
+   script(src="/dist/scripts/accimarket/03-seguimiento-de-ordenes-historico.js")
+   

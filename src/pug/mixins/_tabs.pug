@@ -1,0 +1,11 @@
+mixin tab-group(id)
+  .tab-group(id=id)
+    block
+
+mixin tab-item(id, id_tab_group, _label="")
+  - var tab_group_id = "tab_group_" + id
+  - var tab_item_id = "tab_item_" + id
+  input(name=tab_group_id type="radio" id=tab_item_id)
+  label(for=tab_item_id)= _label
+  .tab-item-content
+    block

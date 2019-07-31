@@ -6,9 +6,11 @@ html(lang='es')
       meta(charset='utf-8')
       meta(http-equiv='X-UA-Compatible', content='IE=edge')
       meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
-      
+      block title
+
       link(rel="stylesheet", href="/node_modules/font-awesome/css/font-awesome.min.css")
-      link(rel="stylesheet", href="/src/styles/css/main.css")
+      link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/css/ui.jqgrid.min.css")
+      link(rel="stylesheet", href="/dist/css/main.css")
       block styles
    body
       block header
@@ -19,4 +21,6 @@ html(lang='es')
       block footer
         include ../partials/footer
 
+      script(src="/node_modules/jquery/dist/jquery.min.js")
+      script(src="https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/js/jquery.jqgrid.min.js")
       block scripts

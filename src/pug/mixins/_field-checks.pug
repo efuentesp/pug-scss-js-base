@@ -1,0 +1,8 @@
+mixin field-checks(id, _label="", ...items)
+  .field
+    label= _label
+    .control
+      each item in items
+        .control-checkbox
+          input(type="checkbox" id=item.key name=item.key)
+          label(for=item.key)= item.value

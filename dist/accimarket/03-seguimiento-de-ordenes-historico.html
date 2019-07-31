@@ -1,0 +1,120 @@
+
+<!-- include _collapsible-panel--><!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>03. Seguimiento de Órdenes - Histórico</title>
+    <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/css/ui.jqgrid.min.css">
+    <link rel="stylesheet" href="/dist/css/main.css">
+    <link rel="stylesheet" href="/dist/css/03-seguimiento-de-ordenes-historico.css">
+  </head>
+  <body>
+    <header></header>
+    <div class="container" id="causion-bursatil">
+      <div class="accordion" id="criterios_busqueda_accordion">
+        <div class="accordion-item"><a class="accordion-toggle" href="#accordion_criterios_busqueda_accordion_item"><i class="fa fa-minus-circle fa-2x icon-button"></i></a>
+          <div class="accordion-content">
+            <div id="search-criterias-column">
+              <div class="field">
+                <label>Fecha</label>
+                <div class="control has-addons">
+                  <input class="input is-small" id="input_date"/>
+                  <button class="is-icon" id="btn_date"><i class="fa fa-calendar icon-button"></i></button>
+                </div>
+              </div>
+              <div class="field">
+                <label>Contrato</label>
+                <div class="control has-addons">
+                  <input class="input is-small" id="input_contrato"/>
+                  <button class="is-icon is-green" id="btn_plus_contrato"><i class="fa fa-plus-circle fa-lg icon-button"></i></button>
+                  <button class="is-icon is-red" id="btn_minus_contrato"><i class="fa fa-minus-circle fa-lg icon-button"></i></button>
+                </div>
+              </div>
+              <div class="field">
+                <label>Digito</label>
+                <div class="control has-addons">
+                  <input class="input is-small" id="input_digito"/>
+                  <button class="is-icon is-green" id="btn_plus_digito"><i class="fa fa-plus-circle fa-lg icon-button"></i></button>
+                  <button class="is-icon is-red" id="btn_minus_digito"><i class="fa fa-minus-circle fa-lg icon-button"></i></button>
+                </div>
+              </div>
+              <div class="field">
+                <label>Servicio de Inversión</label>
+                <div class="control">
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="S01" name="S01"/>
+                    <label for="S01">Asesoría</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="S02" name="S02"/>
+                    <label for="S02">Gestión</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="S03" name="S03"/>
+                    <label for="S03">Comercialización</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="S04" name="S04"/>
+                    <label for="S04">Ejecución</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="S05" name="S05"/>
+                    <label for="S05">N/A</label>
+                  </div>
+                </div>
+              </div>
+              <div class="field">
+                <label>Rompe</label>
+                <div class="control">
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="SI" name="SI"/>
+                    <label for="SI">Si</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="NO" name="NO"/>
+                    <label for="NO">No</label>
+                  </div>
+                  <div class="control-checkbox">
+                    <input type="checkbox" id="N/A" name="N/A"/>
+                    <label for="N/A">N/A</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="search-actions-column">
+              <button class="big-button" id="btn_search"><span class="fa-stack fa-lg"><i class="fa fa-search fa-2x"></i></span><br/><span>Consultar</span></button>
+              <button class="big-button" id="btn_clean"><span class="fa-stack fa-lg"><i class="fa fa-file-o fa-2x"></i></span><br/><span>Limpiar</span></button>
+              <button class="big-button" id="btn_pdf"><span class="fa-stack fa-lg"><i class="fa fa-file-pdf-o fa-2x"></i></span><br/><span>PDF</span></button>
+              <button class="big-button" id="btn_xls"><span class="fa-stack fa-lg"><i class="fa fa-file-excel-o fa-2x"></i></span><br/><span>XLS</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="search-results-section">
+        <div class="tab-group" id="seguimiento_ordenes_tab_group">
+          <input name="tab_group_tab_item_intradia" type="radio" id="tab_item_tab_item_intradia"/>
+          <label for="tab_item_tab_item_intradia">Intradia</label>
+          <div class="tab-item-content">
+          </div>
+          <input name="tab_group_tab_item_historicos" type="radio" id="tab_item_tab_item_historicos"/>
+          <label for="tab_item_tab_item_historicos">Históricos</label>
+          <div class="tab-item-content">
+            <table id="table_ordenes_historicas">
+              <tr>
+                <td></td>
+              </tr>
+            </table>
+            <div id="pager_ordenes_historicas"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer></footer>
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/free-jqgrid@4.15.5/js/jquery.jqgrid.min.js"></script>
+    <script src="/dist/scripts/accimarket/03-seguimiento-de-ordenes-historico.js"></script>
+  </body>
+</html>

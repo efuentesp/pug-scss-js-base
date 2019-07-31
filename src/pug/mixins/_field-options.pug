@@ -1,0 +1,7 @@
+mixin field-options(id, ...items)
+  .field
+      .control
+        each item in items
+          input(type="radio" name=id value=item.key)
+          = item.value
+          br

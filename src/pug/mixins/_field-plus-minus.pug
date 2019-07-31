@@ -1,0 +1,12 @@
+mixin field-plus-minus(id, _label="")
+  - var input_id = "input_" + id
+  - var btn_plus_id = "btn_plus_" + id
+  - var btn_minus_id = "btn_minus_" + id
+  .field
+      label= _label
+      .control.has-addons
+        input.input.is-small(id=input_id)
+        button.is-icon.is-green(id=btn_plus_id)
+            i.fa.fa-plus-circle.fa-lg.icon-button
+        button.is-icon.is-red(id=btn_minus_id)
+            i.fa.fa-minus-circle.fa-lg.icon-button

@@ -131,7 +131,6 @@ button {
   background-color: #dcdcdc;
 
   .panel-label {
-    border-left: 1px solid #afafaf;
     height: 25px;
     padding-left: 10px;
     padding-right: 5px;
@@ -140,7 +139,31 @@ button {
   }
 }
 
+.accordion {
+  .accordion-item {
+    .accordion-content {
+      display: block; // none
+    }
+
+    .accordion-toggle {
+      color: black;
+    }
+
+    .accordion-toggle:hover {
+      color: red;
+    }
+
+    &:target {
+      .accordion-content {
+        display: block;
+      }
+    }
+  }
+}
+
 .collapsible {
+  margin-bottom: 4em;
+
   .panel-content {
     &.is-visible {
       height: auto;

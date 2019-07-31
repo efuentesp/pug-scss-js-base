@@ -135,12 +135,31 @@ button.is-icon.is-red {
 }
 
 .panel-bar .panel-label {
-  border-left: 1px solid #afafaf;
   height: 25px;
   padding-left: 10px;
   padding-right: 5px;
   text-align: middle;
   cursor: pointer;
+}
+
+.accordion .accordion-item .accordion-content {
+  display: block;
+}
+
+.accordion .accordion-item .accordion-toggle {
+  color: black;
+}
+
+.accordion .accordion-item .accordion-toggle:hover {
+  color: red;
+}
+
+.accordion .accordion-item:target .accordion-content {
+  display: block;
+}
+
+.collapsible {
+  margin-bottom: 4em;
 }
 
 .collapsible .panel-content.is-visible {
