@@ -1,11 +1,18 @@
 mixin tab-group(id)
-  .tab-group(id=id)
+  div(id=id)
+    ul
+      each item in items
+        li
+          a(href=item.id)= item.label
     block
 
-mixin tab-item(id, id_tab_group, _label="")
-  - var tab_group_id = "tab_group_" + id
-  - var tab_item_id = "tab_item_" + id
-  input(name=tab_group_id type="radio" id=tab_item_id)
-  label(for=tab_item_id)= _label
-  .tab-item-content
+mixin tab-item(id)
+  div(id=id)
     block
+
+//- +tab-group("tabs", {id:"tabs-1", label:"Tab 1"}, {id:"tabs-2", label:"Tab 3"}, {id:"tabs-3", label:"Tab 3"})
+//-   +tab-item("tabs-1")
+//-     ...
+//-   +tab-item("tabs-2")
+//-     ...
+//-   +tab-item("tabs-3")

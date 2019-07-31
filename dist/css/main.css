@@ -155,7 +155,7 @@ button.is-icon.is-red {
 }
 
 .accordion .accordion-item:target .accordion-content {
-  display: none;
+  display: block;
 }
 
 .collapsible {
@@ -172,5 +172,21 @@ button.is-icon.is-red {
   height: 0;
   -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
+}
+
+.tab-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  background: #efefef;
+  -webkit-box-shadow: 0 48px 48px -32px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 48px 48px -32px rgba(0, 0, 0, 0.3);
+}
+
+.tab-item-radio {
+  position: absolute;
+  opacity: 0;
 }
 /*# sourceMappingURL=main.css.map */

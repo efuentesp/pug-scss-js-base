@@ -1,0 +1,7 @@
+mixin field-select(id, _label="", ...items)
+  .field
+    label= _label
+    .control
+      select
+        each item in items
+          option(value=item.key)= item.value
