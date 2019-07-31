@@ -1,0 +1,32 @@
+extends ../../layouts/html5
+
+block content
+  .container#movimientos-por-contrato
+    +collapsible-panel("search-criterias-section")
+      #search-criterias-column
+        +field-input("contrato", "Contrato", true)
+        +field-date("fecha_inicial", "Fecha Inicial")
+        +field-date("fecha_final", "Fecha Final")
+        +field-input("operaciones_mayores_a", "Operaciones mayores a")
+        +field-input("plazo", "Plazo")
+
+        +field-input("cliente", "Cliente")
+        +field-input("digito", "Digito")
+        +field-input("digito_verif", "Digito Verif")
+        +field-input("perfil", "Perfil")
+        +field-input("libro", "Libro")
+        +field-input("status", "Status")
+        +field-input("area", "Area")
+        +field-input("division", "División")
+        +field-input("direccion", "Dirección")
+        +field-input("region", "Región")
+        +field-input("sucursal", "Sucursal")
+        +field-input("zona", "Zona")
+        +field-input("gerencia", "Gerencia")
+      #search-actions-column
+        +button-search
+        +button-clean
+        +button-pdf
+        +button-xls        
+    section#search-results-section
+          +grid("results")

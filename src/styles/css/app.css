@@ -1,0 +1,157 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  color: #333;
+}
+
+*:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+  font-size: 1em;
+}
+
+.container {
+  padding: 5px;
+}
+
+.field {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: [field-label] 20px [field-control] 24px;
+      grid-template-rows: [field-label] 20px [field-control] 24px;
+}
+
+.field label {
+  display: block;
+  font-weight: bold;
+}
+
+.field .input {
+  height: 1.5em;
+  background-color: #fff;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  color: #666;
+  max-width: 100%;
+  width: 100%;
+}
+
+.field .input.is-small {
+  width: 125px;
+}
+
+.control {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  clear: both;
+  font-size: 1rem;
+  position: relative;
+  text-align: left;
+}
+
+.control.has-addons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.control.has-addons > button:first-child {
+  padding-left: 5px;
+}
+
+input[type="radio"] {
+  vertical-align: middle;
+}
+
+.big-button {
+  width: 78px;
+  height: 70px;
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #afafaf;
+  -webkit-box-shadow: 2px 3px #dcdcdc;
+          box-shadow: 2px 3px #dcdcdc;
+}
+
+button {
+  color: #333;
+}
+
+button.is-icon {
+  border: none;
+  background: none;
+  font-size: 18px;
+  padding: 0 2px;
+}
+
+button.is-icon.is-green {
+  color: #86ba38;
+}
+
+button.is-icon.is-red {
+  color: #eb272c;
+}
+
+.is-icon {
+  color: #666;
+}
+
+.fa-2x {
+  font-size: 1.5em;
+}
+
+.panel-bar {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  padding-right: 10px;
+  border: 1px solid #afafaf;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  background-color: #dcdcdc;
+}
+
+.panel-bar .panel-label {
+  border-left: 1px solid #afafaf;
+  height: 25px;
+  padding-left: 10px;
+  padding-right: 5px;
+  text-align: middle;
+  cursor: pointer;
+}
+
+.collapsible .panel-content.is-visible {
+  height: auto;
+  overflow: visible;
+}
+
+.collapsible .panel-content.is-hidden {
+  overflow-y: hidden;
+  height: 0;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,23 @@
+{
+  "name": "pug-scss-js-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "D": "^1.0.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "font-awesome": "^4.7.0",
+    "prettier": "^1.18.2"
+  },
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "scripts": {
+    "pug": "pug -w ./src/pug/pages -o ./src/html -P"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

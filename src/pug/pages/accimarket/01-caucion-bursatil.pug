@@ -1,0 +1,20 @@
+extends ../../layouts/html5
+
+block styles
+   link(rel="stylesheet", href="/src/styles/css/01-caucion-bursatil.css")
+
+block content
+   .container#causion-bursatil
+      +collapsible-panel("search-criterias-section")
+         #search-criterias-column
+            +field-date("date", "Fecha")
+            +field-plus-minus("contrato", "Contrato")
+            +field-plus-minus("digito", "Digito")
+            +field-options("banco", {key: "CB", value:"Casa de Bolsa"}, {key:"B", value:"Banco"})
+         #search-actions-column
+            +button-search
+            +button-clean
+            +button-pdf
+            +button-xls
+      section#search-results-section
+            +grid("results")

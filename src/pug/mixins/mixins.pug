@@ -1,0 +1,81 @@
+mixin field-input(id, _label="", required=false, size="small")
+  - var input_id = "input_" + id
+  - var size_class = "is-" + size
+  .field
+    label= _label
+    if required
+      span.required *
+    .control
+      input.input(id=input_id, class=size_class)
+
+mixin field-date(id, _label="")
+  - var input_id = "input_" + id
+  - var btn_id = "btn_" + id
+  .field
+      label= _label
+      .control.has-addons
+        input.input.is-small(id=input_id)
+        button.is-icon(id=btn_id)
+            i.fa.fa-calendar.icon-button
+
+mixin field-plus-minus(id, _label="")
+  - var input_id = "input_" + id
+  - var btn_plus_id = "btn_plus_" + id
+  - var btn_minus_id = "btn_minus_" + id
+  .field
+      label= _label
+      .control.has-addons
+        input.input.is-small(id=input_id)
+        button.is-icon.is-green(id=btn_plus_id)
+            i.fa.fa-plus-circle.fa-lg.icon-button
+        button.is-icon.is-red(id=btn_minus_id)
+            i.fa.fa-minus-circle.fa-lg.icon-button
+
+mixin field-options(id, ...items)
+  .field
+      .control
+        each item in items
+          input(type="radio" name=id value=item.key)
+          = item.value
+          br
+
+mixin button-search
+  button.big-button(id="btn_search")
+      span.fa-stack.fa-lg
+        i.fa.fa-search.fa-2x
+      br
+      span Consultar
+
+mixin button-clean
+  button.big-button(id="btn_clean")
+      span.fa-stack.fa-lg
+        i.fa.fa-file-o.fa-2x
+      br
+      span Limpiar
+
+mixin button-pdf
+  button.big-button(id="btn_pdf")
+      span.fa-stack.fa-lg
+        i.fa.fa-file-pdf-o.fa-2x
+      br
+      span PDF
+
+mixin button-xls
+  button.big-button(id=(id="btn_xls"))
+      span.fa-stack.fa-lg
+        i.fa.fa-file-excel-o.fa-2x
+      br
+      span XLS
+
+mixin grid(id)
+  <!-- A Grid goes here... -->
+
+mixin collapsible-panel(id)
+  - var chk_toggle_id = "chk_toggle_" + id
+  .collapsible(id=id)
+    .panel-bar
+      input.toggle(type="checkbox" id=chk_toggle_id checked hidden)
+      label.panel-label(for=chk_toggle_id)
+        i.fa.fa-minus
+    .panel-content.is-visible
+      block
