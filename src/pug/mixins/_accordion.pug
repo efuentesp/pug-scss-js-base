@@ -5,8 +5,6 @@ mixin accordion(id)
 mixin accordion-item(id, _label="")
   - var accordion_item_id = "accordion_" + id
   - var accordion_item_ref = "#accordion_" + id
-  .accordion-item
-    a.accordion-toggle(href=accordion_item_ref)
-      i.fa.fa-minus-circle.fa-2x.icon-button
-    .accordion-content
-      block
+  h3= _label
+  .accordion-content
+    block
