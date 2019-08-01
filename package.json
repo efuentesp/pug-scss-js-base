@@ -9,7 +9,7 @@
     "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.3.1",
+    "jquery": "^3.4.1",
     "jquery-ui-dist": "^1.12.1",
     "prettier": "^1.18.2"
   },
@@ -17,7 +17,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
-    "pug": "pug -w ./src/pug/pages -o ./dist -P"
+    "pug": "pug -w ./src/pug/pages -o ./dist -P -p ./src/pug"
   },
   "keywords": [],
   "author": "",
