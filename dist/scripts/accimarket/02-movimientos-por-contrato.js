@@ -1,6 +1,8 @@
 console.log("01-02-movimientos-por-contrato");
 
 $(function() {
+  $(document).tooltip();
+
   $("#criterios_busqueda_accordion").accordion({
     collapsible: true
   });

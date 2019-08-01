@@ -1,6 +1,8 @@
 console.log("03-seguimiento-de-ordenes-historico");
 
 $(function() {
+  $(document).tooltip();
+
   $("#criterios_busqueda_accordion").accordion({
     collapsible: true
   });

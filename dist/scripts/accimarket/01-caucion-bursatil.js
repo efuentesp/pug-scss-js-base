@@ -1,9 +1,22 @@
 console.log("01-caucion-bursatil");
 
 $(function() {
+  $(document).tooltip();
+
   $("#criterios_busqueda_accordion").accordion({
     collapsible: true
   });
+
+  $("#input_date").datepicker({
+    showOn: "button",
+    buttonImage: "/dist/images/calendar.gif",
+    buttonImageOnly: true
+  });
+
+  // $("#btn_date").click(function() {
+  //   console.log("Show date picker");
+  //   $("#input_date").datepicker("show");
+  // });
 
   $("#table_contratos").jqGrid({
     url: "http://localhost:3000/fideicomiso",
