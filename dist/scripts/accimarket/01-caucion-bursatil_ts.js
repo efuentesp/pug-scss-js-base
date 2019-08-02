@@ -1,5 +1,4 @@
 console.log("01-caucion-bursatil");
-$(document).tooltip();
 $("#criterios_busqueda_accordion").accordion({
     collapsible: true
 });

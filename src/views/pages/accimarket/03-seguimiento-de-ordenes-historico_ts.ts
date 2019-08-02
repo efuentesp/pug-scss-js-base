@@ -1,14 +1,12 @@
-console.log("01-02-movimientos-por-contrato");
-
-$(document).tooltip();
+console.log("03-seguimiento-de-ordenes-historico");
 
 $("#criterios_busqueda_accordion").accordion({
   collapsible: true
 });
 
-$("#movimientos_por_contrato_tab_group").tabs();
+$("#seguimiento_ordenes_tab_group").tabs();
 
-$("#table_movimientos_contrato").jqGrid({
+$("#table_ordenes_historicas").jqGrid({
   url: "http://localhost:3000/fideicomiso",
   datatype: "json",
   mtype: "GET",
@@ -42,7 +40,7 @@ $("#table_movimientos_contrato").jqGrid({
     { name: "adicionalesnombrenotario", width: 90 },
     { name: "adicionalesnonotario", width: 90 }
   ],
-  pager: "#pager_movimientos_contrato",
+  pager: "#pager_ordenes_historicas",
   rowNum: 10,
   rowList: [10, 20, 30],
   sortname: "generalesnumero",

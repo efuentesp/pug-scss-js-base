@@ -1,18 +1,12 @@
-console.log("01-caucion-bursatil");
-
-$(document).tooltip();
+console.log("01-02-movimientos-por-contrato");
 
 $("#criterios_busqueda_accordion").accordion({
   collapsible: true
 });
 
-$("#input_date").datepicker({
-  showOn: "button",
-  buttonImage: "/dist/images/calendar.gif",
-  buttonImageOnly: true
-});
+$("#movimientos_por_contrato_tab_group").tabs();
 
-$("#table_contratos").jqGrid({
+$("#table_movimientos_contrato").jqGrid({
   url: "http://localhost:3000/fideicomiso",
   datatype: "json",
   mtype: "GET",
@@ -46,7 +40,7 @@ $("#table_contratos").jqGrid({
     { name: "adicionalesnombrenotario", width: 90 },
     { name: "adicionalesnonotario", width: 90 }
   ],
-  pager: "#pager_contratos",
+  pager: "#pager_movimientos_contrato",
   rowNum: 10,
   rowList: [10, 20, 30],
   sortname: "generalesnumero",

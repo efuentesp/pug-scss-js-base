@@ -1,14 +1,16 @@
-console.log("03-seguimiento-de-ordenes-historico");
-
-$(document).tooltip();
+console.log("01-caucion-bursatil");
 
 $("#criterios_busqueda_accordion").accordion({
   collapsible: true
 });
 
-$("#seguimiento_ordenes_tab_group").tabs();
+$("#input_date").datepicker({
+  showOn: "button",
+  buttonImage: "/dist/images/calendar.gif",
+  buttonImageOnly: true
+});
 
-$("#table_ordenes_historicas").jqGrid({
+$("#table_contratos").jqGrid({
   url: "http://localhost:3000/fideicomiso",
   datatype: "json",
   mtype: "GET",
@@ -42,7 +44,7 @@ $("#table_ordenes_historicas").jqGrid({
     { name: "adicionalesnombrenotario", width: 90 },
     { name: "adicionalesnonotario", width: 90 }
   ],
-  pager: "#pager_ordenes_historicas",
+  pager: "#pager_contratos",
   rowNum: 10,
   rowList: [10, 20, 30],
   sortname: "generalesnumero",

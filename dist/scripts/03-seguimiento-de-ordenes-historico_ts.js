@@ -1,4 +1,5 @@
 console.log("03-seguimiento-de-ordenes-historico");
+$(document).tooltip();
 $("#criterios_busqueda_accordion").accordion({
     collapsible: true
 });

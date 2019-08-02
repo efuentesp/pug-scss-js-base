@@ -21,7 +21,7 @@
     "pug-cli": "^1.0.0-alpha6"
   },
   "scripts": {
-    "pug": "tsc && pug -w ./src/pug/pages -o ./dist -P -p ./src/pug",
+    "pug": "tsc && pug -w ./src/views/pages -o ./dist -P -p ./src/pug",
     "tsc": "tsc"
   },
   "keywords": [],
