@@ -27,9 +27,9 @@ block content
                            {key: "SI", value:"Si", color:"#fff"},
                            {key: "NO", value:"No", color:"#fff"},
                            {key: "N/A", value:"N/A", color:"#fff"}
-                           )                          
+                           )
             #search-actions-column
-               +button-search
+               +button-search("Sirve para buscar Contratos.")
                +button-clean
                +button-pdf
                +button-xls
@@ -42,5 +42,4 @@ block content
             +grid("ordenes_historicas")
 
 block scripts
-   script(src="/dist/scripts/accimarket/03-seguimiento-de-ordenes-historico.js")
-   
+   script(src="/dist/scripts/accimarket/03-seguimiento-de-ordenes-historico_ts.js")
