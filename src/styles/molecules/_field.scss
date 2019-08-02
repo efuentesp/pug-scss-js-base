@@ -1,0 +1,42 @@
+@import "../vars";
+
+.field {
+  display: grid;
+  grid-template-rows: [field-label] 20px [field-control] 24px;
+
+  label {
+    display: block;
+    font-weight: bold;
+  }
+
+  .input {
+    height: 1.5em;
+    background-color: $white;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    color: $dark_gray;
+    max-width: 100%;
+    width: 100%;
+
+    &.is-small {
+      width: 125px;
+    }
+  }
+
+  .control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: left;
+
+    &.has-addons {
+      display: flex;
+      justify-content: flex-start;
+
+      & > button:first-child {
+        padding-left: 5px;
+      }
+    }
+  }
+}

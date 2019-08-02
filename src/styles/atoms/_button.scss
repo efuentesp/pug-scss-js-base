@@ -1,0 +1,33 @@
+@import "../vars";
+
+button {
+  color: $font_color;
+  &.is-icon {
+    border: none;
+    background: none;
+    font-size: 18px;
+    padding: 0 2px;
+
+    &.is-green {
+      color: $green;
+    }
+
+    &.is-red {
+      color: $red;
+    }
+  }
+
+  &.is-icon {
+    color: $dark_gray;
+  }
+}
+
+.big-button {
+  width: 78px;
+  height: 70px;
+  background: #f0f0f0;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #afafaf;
+  box-shadow: 2px 3px #dcdcdc;
+}
